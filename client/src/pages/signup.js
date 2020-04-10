@@ -33,7 +33,7 @@ function Home() {
                 <div>
                 
                 <form className="signUpForm form-signin" onSubmit={handleSubmit}>
-                <h1 class="h3 mb-3 font-weight-normal">Sign up</h1>
+                <h1 className="h3 mb-3 font-weight-normal">Sign up</h1>
                     <input 
                     className="form-control"
                     type="text"
@@ -68,9 +68,9 @@ function Home() {
                     required ref={passwordCon}
                     />  
 
-                    <button type="submit" class="btn btn-lg btn-primary btn-block subBut">Sign Up</button>
+                    <button type="submit" className="btn btn-lg btn-primary btn-block subBut">Sign Up</button>
         
-                    <a class="signUp" href="/">Login</a>
+                    <a className="signUp" href="/">Login</a>
 
                 </form>
 
