@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import API from '../utils/API'
+import Navbar from '../components/navBar'
 
 function Home() {
     //states for username and password
@@ -25,52 +26,54 @@ function Home() {
 
 
     return (
-        <div className="signUpWrapper">
-            <div className="signUpHeadDiv">
-                <h2 className='signUpHead'>Log In</h2>
-            </div>
-            <form className="signUpForm" onSubmit={handleSubmit}>
+         <div>
+                <div>
+                    <Navbar /> 
+                </div>
+                <div>
+                
+                <form className="signUpForm form-signin" onSubmit={handleSubmit}>
+                <h1 class="h3 mb-3 font-weight-normal">Sign up</h1>
+                    <input 
+                    className="form-control"
+                    type="text"
+                    placeholder="Email"
+                    name="email"
+                    required ref={email}
+                    />
 
-                <input 
-                className="form-control"
-                type="text"
-                placeholder="Email"
-                name="email"
-                required ref={email}
-                />
+                    <input 
+                    className="form-control"
+                    type="text"
+                    placeholder="Username"
+                    name="username"
+                    required ref={username}
+                    />
 
-                <input 
-                className="form-control"
-                type="text"
-                placeholder="Username"
-                name="username"
-                required ref={username}
-                />
+                    <input 
+                    className="form-control"
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    id="password-input"
+                    required ref={password}
+                    />   
 
-                <input 
-                className="form-control"
-                type="password"
-                placeholder="Password"
-                name="password"
-                required ref={password}
-                />   
+                    <input 
+                    className="form-control"
+                    type="password"
+                    placeholder="Confirm Password"
+                    id="passwordCon-input"
+                    name="confirm password"
+                    required ref={passwordCon}
+                    />  
 
-                <input 
-                className="form-control"
-                type="password"
-                placeholder="Confirm Password"
-                name="confirm password"
-                required ref={passwordCon}
-                />  
+                    <button type="submit" class="btn btn-lg btn-primary btn-block subBut">Sign Up</button>
+        
+                    <a class="signUp" href="/">Login</a>
 
-                <button className="btn" type="submit">
-                Submit
-                </button>       
+                </form>
 
-            </form>
-
-                <div className="loginDiv">
-                    <a className="login" href="/">Login</a>
                 </div>
         </div>
     )   
