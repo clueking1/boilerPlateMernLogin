@@ -6,7 +6,7 @@ const cors = require('cors')
 const user = require('./routes/api/api-routes')
 
 const app = express()
-const PORT = process.env.PORT || 4001
+const PORT = process.env.PORT || 5001
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
