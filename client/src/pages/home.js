@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from 'react'
+import React, { useRef } from 'react'
 import Navbar from '../components/navBar'
 import API from '../utils/API'
 import LogBut from '../components/logBut'
@@ -14,7 +14,8 @@ function Home() {
         API.login({
             username: username.current.value,
             password: password.current.value
-        }).catch(err => {
+        })
+        .catch(err => {
             if (err) {
                 throw err
             }

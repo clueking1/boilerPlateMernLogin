@@ -3,7 +3,7 @@ import API from '../utils/API'
 import Navbar from '../components/navBar'
 
 function Home() {
-    //states for username and password
+
     const email = useRef();
     const username = useRef();
     const password = useRef();
