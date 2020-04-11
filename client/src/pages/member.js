@@ -1,4 +1,6 @@
 import React from "react";
+import AuthContext from '../utils/authContext'
+import LogOut from '../components/logOutBut'
 
 function Member() {
     //states for username and password
@@ -9,7 +11,7 @@ function Member() {
     return (
         <div>
             <p>hello <span className="name"></span></p>
-            <a className="logout" href="/logout">Logout</a>
+            <LogOut />
         </div>
     )   
 }

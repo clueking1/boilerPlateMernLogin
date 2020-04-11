@@ -1,7 +1,7 @@
-import React, { useRef } from 'react'
+import React, { useRef, useContext } from 'react'
 import Navbar from '../components/navBar'
 import API from '../utils/API'
-
+import LogBut from '../components/logBut'
 
 
 function Home() {
@@ -14,7 +14,12 @@ function Home() {
         API.login({
             username: username.current.value,
             password: password.current.value
+        }).catch(err => {
+            if (err) {
+                throw err
+            }
         })
+
         
       };
 
@@ -25,7 +30,7 @@ function Home() {
     </div>
         <div>
             <form className="loginForm form-signin" onSubmit={handleSubmit}>
-            <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+            <h1 className="h3 mb-3 font-weight-normal">Sign in</h1>
                 <input 
                 className="form-control"
                 type="text"
@@ -44,10 +49,8 @@ function Home() {
 
        
 
-                <button className="btn btn-lg btn-primary btn-block subBut" type="submit">
-                Submit
-                </button>       
-                <a class="signUp btn btn-lg btn-primary btn-block" href="/signup">Sign Up</a>
+                <LogBut />     
+                <a className="signUp btn btn-lg btn-primary btn-block" href="/signup">Sign Up</a>
             </form>
 
         

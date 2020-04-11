@@ -1,35 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Home from "./pages/home";
 import Signup from "./pages/signup";
 import Member from "./pages/member"
 import './login.css'
+import AuthContext from './utils/authContext'
+import API from './utils/API'
+import fakeAuth from './utils/authContext'
 
-const PrivateRoute = ({ component: Component, isAuthenticated, ...rest}) => (
-  <Route
-    {...rest}
-    render={props => (
-      isAuthenticated
-      ? (
-         <Component {...props} />
-      )
-      : (<Redirect to={{ pathname: '/login', state: { from: props.location} }} />)
-    )}
-  />
-  );
 
 function App() {
+function PrivateRoute({ children, ...rest }) {
+  console.log('hi')
+    return (
+      <Route
+        {...rest}
+        render={({ location }) =>
+          fakeAuth.isAuthenticated ? (
+            children
+          ) : (
+            <Redirect
+              to={{
+                pathname: "/login",
+                state: { from: location }
+              }}
+            />
+          )
+        }
+      />
+    );
+  }
+
   return (
+   
     <Router>
       <div>
         <Switch>
-        <Route exact path="/" component={Home} />
-        <Route  path="/login" component={Home} />
-        <Route  path="/signup" component={Signup} />
-        <PrivateRoute  path="/member" component={Member} />
+        <Route exact path="/">
+          <Home />
+        </Route> 
+        <Route  path="/login">
+          <Home />
+        </Route>
+        <Route  path="/signup">
+          <Signup />
+        </Route>
+        <PrivateRoute  path="/member">
+          <Member />
+        </PrivateRoute>
         </Switch>
       </div>
     </Router>
+ 
   );
   
 }

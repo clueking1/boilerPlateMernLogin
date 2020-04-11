@@ -68,7 +68,7 @@ function Home() {
                     required ref={passwordCon}
                     />  
 
-                    <button type="submit" className="btn btn-lg btn-primary btn-block subBut">Sign Up</button>
+                    <button type="submit" className="btn btn-lg btn-primary btn-block subBut" >Sign Up</button>
         
                     <a className="signUp" href="/">Login</a>
 

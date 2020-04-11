@@ -28,5 +28,13 @@ export default {
  
   userGreeting: function() {
     return axios.get("/api/user_data");
+  },
+  checkUser: function(getData) {
+    return axios({
+        method: 'get',
+        headers: { 'content-type': 'application/json' },
+        url: 'http://localhost:5001/api/member',
+        data: getData
+      })
   }
 };
