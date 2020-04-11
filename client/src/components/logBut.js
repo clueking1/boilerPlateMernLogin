@@ -1,18 +1,10 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-
-  useHistory,
-  useLocation
-} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import fakeAuth from '../utils/authContext'
 
 
   function LoginPage() {
     let history = useHistory();
-
-  
-
     let login = () => {
       fakeAuth.authenticate(() => {
         history.replace('/member');

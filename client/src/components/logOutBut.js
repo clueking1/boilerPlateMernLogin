@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  
-  useHistory,
-
-} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import fakeAuth from '../utils/authContext'
 
 function AuthButton() {

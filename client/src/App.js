@@ -1,18 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Home from "./pages/home";
 import Signup from "./pages/signup";
 import Member from "./pages/member"
 import './login.css'
-import AuthContext from './utils/authContext'
-import API from './utils/API'
 import fakeAuth from './utils/authContext'
 
 
 function App() {
 function PrivateRoute({ children, ...rest }) {
-  console.log('hi')
-    return (
+  return (
       <Route
         {...rest}
         render={({ location }) =>
