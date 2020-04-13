@@ -76,7 +76,7 @@ function Home() {
 
                     <input 
                     className="form-control"
-                    type="password"
+                    type="email"
                     placeholder="Leave Blank"
                     id="botPass-input"
                     name="confirm password"
