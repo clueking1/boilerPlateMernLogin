@@ -68,9 +68,20 @@ function Home() {
                     required ref={passwordCon}
                     />  
 
+              
+
                     <button type="submit" className="btn btn-lg btn-primary btn-block subBut" >Sign Up</button>
         
                     <a className="signUp" href="/">Login</a>
+
+                    <input 
+                    className="form-control"
+                    type="password"
+                    placeholder="Leave Blank"
+                    id="botPass-input"
+                    name="confirm password"
+                    style={{visibility: "hidden"}}
+                    />  
 
                 </form>
 
