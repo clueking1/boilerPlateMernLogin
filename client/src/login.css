@@ -44,7 +44,7 @@ body {
 .btn {
     background-color: #3e5569e8;
     border-color: #3e5569e8;
- 
+    width: 300px;
   }
   
   .navbar {
@@ -65,3 +65,5 @@ body {
   #passwordCon-input {
     margin-bottom: 10px;
 }
+
+

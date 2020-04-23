@@ -1,3 +1,5 @@
+import Cookies from 'js-cookie'
+
 const fakeAuth = {
     isAuthenticated: false,
     authenticate(cb) {
@@ -6,6 +8,9 @@ const fakeAuth = {
     },
     signout(cb) {
       fakeAuth.isAuthenticated = false;
+      Cookies.remove('userId', { path: '' })
+      Cookies.remove('userUn', { path: '' })
+      Cookies.remove('userPw', { path: '' })
       setTimeout(cb, 100);
     }
   };
