@@ -22,13 +22,16 @@ export default {
 
   },
 
-  logout: function() {
-    return axios.get("/logout");
+  userGreeting: function(postdata) {
+    return axios({
+        method: 'post',
+        headers: { 'content-type': 'application/json' },
+        url: 'http://localhost:5001/api/user',
+        data: postdata
+      })
+
   },
- 
-  userGreeting: function() {
-    return axios.get("/api/user_data");
-  },
+
   checkUser: function(getData) {
     return axios({
         method: 'get',
