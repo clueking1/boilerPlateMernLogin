@@ -63,6 +63,41 @@ function Home(props) {
 
     };
 
+    useEffect(() => {
+        
+        if (un && pw) {
+          API.login({
+              username: un,
+              password: pw
+          })
+          .then(res => {
+              if (res) {
+              props.setGlobalState({
+                  user: res.data
+              })
+   
+              } else {
+                  return
+              }
+          })
+          .then(() => {
+              fakeAuth.authenticate(() => {
+                  history.replace(url);
+
+                });
+          })
+          .catch(err => {
+              if (err) {
+                  throw err
+              }
+          })
+      } else {
+          return
+      }
+    
+
+  }, [])
+
  return (
      <div>
      <div>
