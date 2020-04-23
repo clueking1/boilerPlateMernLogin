@@ -24,6 +24,9 @@ router.post('/user', [
      req.body.email,
      req.body.password,
   )
+  .then(result => {
+    res.json(result)
+  })
   
 });
 
