@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Redirect, useHistory } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Home from "./pages/home";
 import Signup from "./pages/signup";
 import Member from "./pages/member"
@@ -9,7 +9,7 @@ import fakeAuth from './utils/authContext'
 
 function App() {
 function PrivateRoute({ children, ...rest }) {
-  let history = useHistory()
+
   return (
       <Route
         {...rest}
