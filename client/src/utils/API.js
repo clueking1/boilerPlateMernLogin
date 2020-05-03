@@ -6,7 +6,7 @@ export default {
     return axios({
         method: 'post',
         headers: { 'content-type': 'application/json' },
-        url: 'http://localhost:5001/user',
+        url: '/user',
         data: postdata
       })
 
@@ -16,7 +16,7 @@ export default {
     return axios({
         method: 'post',
         headers: { 'content-type': 'application/json' },
-        url: 'http://localhost:5001/api/login',
+        url: '/api/login',
         data: postdata
       })
 
@@ -26,7 +26,7 @@ export default {
     return axios({
         method: 'post',
         headers: { 'content-type': 'application/json' },
-        url: 'http://localhost:5001/api/user',
+        url: '/api/user',
         data: postdata
       })
 
@@ -36,7 +36,7 @@ export default {
     return axios({
         method: 'get',
         headers: { 'content-type': 'application/json' },
-        url: 'http://localhost:5001/api/member',
+        url: '/api/member',
         data: getData
       })
   }
