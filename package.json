@@ -1,5 +1,5 @@
 {
-  "name": "boilerPlateMernLogin",
+  "name": "client",
   "version": "1.0.0",
   "description": "A simple boilerplate login/sign for mern applications.",
   "main": "server.js",
