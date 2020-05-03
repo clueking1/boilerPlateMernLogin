@@ -2,5 +2,5 @@
     "short_name": "React App",
     "name": "Create React App Sample",
   
-    "start_url": "https://boilerplatemernlogin.herokuapp.com/"
+    "start_url": "https://boilerplatemernlogin.herokuapp.com/signup"
 }
