@@ -4,7 +4,7 @@ import API from '../utils/API'
 import { withGlobalState } from 'react-globally'
 import { Alert } from 'reactstrap';
 
-function Home() {
+function Signup() {
 
     const [email, setEmail] = useState('')
     const [username, setUsername] = useState('')
@@ -179,4 +179,4 @@ function Home() {
     )   
 }
 
-export default withGlobalState(Home)
+export default withGlobalState(Signup)
