@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
-import Home from "./pages/home";
-import Signup from "./pages/signup";
-import Member from "./pages/member"
+import Home from "./pages/home.js";
+import Signup from "./pages/signup.js";
+import Member from "./pages/member.js"
 import './login.css'
-import fakeAuth from './utils/authContext'
+import fakeAuth from './utils/authContext.js'
 
 
 function App() {
