@@ -40,7 +40,7 @@ function PrivateRoute({ children, ...rest }) {
         <Route  path="/login">
           <Home />
         </Route>
-        <Route  path="/signup">
+        <Route  path="/sign">
           <Signup />
         </Route>
         <PrivateRoute  path="/member">

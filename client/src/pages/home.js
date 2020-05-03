@@ -134,7 +134,7 @@ function Home(props) {
                     <button type='submit' className='btn btn-lg btn-primary btn-block'>Log In</button>    
                 </div> 
                 
-                <a className="signUp btn btn-lg btn-primary btn-block" href="/signup">Sign Up</a>
+                <a className="signUp btn btn-lg btn-primary btn-block" href="/sign">Sign Up</a>
             </form>
 
         
