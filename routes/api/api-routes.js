@@ -3,7 +3,6 @@ const router = express.Router()
 const passport = require('../../config/passport')
 const db = require('../../models/user')
 const con = require('../../config/config')
-const isAuthenticated = require('../../config/middleware/isAuthenticated')
 const { check, validationResult } = require('express-validator');
 
 
@@ -34,7 +33,7 @@ router.post('/api/login', passport.authenticate('local'), (req, res) => {
   res.json(req.user[0])
 })
 
-router.get('/member', isAuthenticated, (_, res) => {
+router.get('/member', (_, res) => {
   res.json('hiii')
 })  
 
